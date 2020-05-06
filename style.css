@@ -43,12 +43,13 @@ h1 {
 	transform: rotate(45deg);
 	right: -200px;
 	top: 0;
+	animation: trf 4s ease-in-out infinite;
 }
 
 .rect_2 {
 	width: 400px;
 	height: 400px;
-	border: 2px solid #af8;
+	border: 2px solid aqua;
 	position: absolute;
 	-webkit-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
@@ -56,6 +57,7 @@ h1 {
 	transform: rotate(45deg);
 	bottom: -200px;
 	left:  0px;
+	animation: trf 4s ease-in-out infinite;
 }
 
 span {
@@ -83,11 +85,23 @@ a[download]:hover  {
 	color: #af8;
 }
 
-@media (max-height: 596px) {
-	.rect_2 {
-		display: none;
+
+
+@keyframes trf {
+	0% {
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	100% {
+		-webkit-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		transform: rotate(-45deg);
 	}
 }
+
 
 @media (max-width: 1496px) {
 	.rect {
@@ -96,7 +110,8 @@ a[download]:hover  {
 		-ms-transform: translateX(-50%) rotate(45deg);
 		-o-transform: translateX(-50%) rotate(45deg);
 		transform: translateX(-50%) rotate(45deg);
-		top: -340px
+		top: -340px;
+		animation: auto;
 	}
 
 	.rect_2 {
@@ -105,7 +120,8 @@ a[download]:hover  {
 		-ms-transform: translateX(-50%) rotate(45deg);
 		-o-transform: translateX(-50%) rotate(45deg);
 		transform: translateX(-50%) rotate(45deg);
-		bottom: -340px
+		bottom: -340px;
+		animation: auto;
 	}
 }
 
@@ -149,3 +165,15 @@ a[download]:hover  {
 	}
 }
 
+
+@media (max-height: 596px) {
+	.rect {
+		top: -400px;
+	}
+	.rect_2 {
+		bottom: -400px;
+	}
+}
+
+
+z
